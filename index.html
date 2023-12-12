@@ -7,9 +7,24 @@
       body {
         margin: 0;
       }
+
+      .buttons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .buttons button {
+        margin: 2px 0;
+      }
     </style>
   </head>
   <body>
     <script type="module" src="/main.js"></script>
+    <div class="buttons"></div>
   </body>
 </html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Moto Carabela explode
+* source:	https://sketchfab.com/3d-models/moto-carabela-explode-62b0f94ec68d41fbaabf947e12b1aebc
+* author:	GDS (https://sketchfab.com/GDSLAB)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Moto Carabela explode" (https://sketchfab.com/3d-models/moto-carabela-explode-62b0f94ec68d41fbaabf947e12b1aebc) by GDS (https://sketchfab.com/GDSLAB) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
