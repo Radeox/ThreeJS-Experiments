@@ -28,8 +28,8 @@ new OrbitControls(camera, renderer.domElement);
 scene.background = new THREE.Color(0xf9f9f9);
 
 // Set camera position
-camera.position.z = 40;
-camera.position.y = 6;
+camera.position.z = 1;
+camera.position.y = 0;
 
 class Animation {
   constructor(scene, animations) {
@@ -67,7 +67,7 @@ let model;
 const loader = new GLTFLoader();
 
 loader.load(
-  "public/scene.gltf",
+  "public/test.glb",
   function (gltf) {
     model = new Animation(gltf.scene, gltf.animations);
     scene.add(gltf.scene);
@@ -102,8 +102,8 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Make floaty camera effect
-  camera.position.y += Math.sin(Date.now() * 0.0005) * 0.01;
-  camera.position.x += Math.sin(Date.now() * 0.0005) * 0.01;
+  camera.position.y += Math.sin(Date.now() * 0.0001) * 0.0001;
+  camera.position.x += Math.sin(Date.now() * 0.0001) * 0.0001;
 
   // Update time
   var delta = clock.getDelta();

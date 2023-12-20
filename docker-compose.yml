@@ -1,0 +1,13 @@
+---
+version: "3"
+
+services:
+  gulp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8082:8082
+    volumes:
+      - .:/app/
+    command: ["npx", "vite", "--port", "8082", "--host"]
