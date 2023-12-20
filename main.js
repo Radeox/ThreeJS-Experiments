@@ -67,7 +67,7 @@ let model;
 const loader = new GLTFLoader();
 
 loader.load(
-  "public/test.glb",
+  "public/filter.glb",
   function (gltf) {
     model = new Animation(gltf.scene, gltf.animations);
     scene.add(gltf.scene);
@@ -75,13 +75,13 @@ loader.load(
     model.animations.forEach((clip) => {
       // Create buttons
       const button = document.createElement("button");
-      button.textContent = "Explode";
+      button.textContent = clip.name;
       button.onclick = function () {
         model.playAnimation(clip);
       };
 
       const buttonReverse = document.createElement("button");
-      buttonReverse.textContent = "Collapse";
+      buttonReverse.textContent = clip.name + " (Reverse)";
       buttonReverse.onclick = function () {
         model.playAnimationReverse(clip);
       };
@@ -102,8 +102,8 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Make floaty camera effect
-  camera.position.y += Math.sin(Date.now() * 0.0001) * 0.0001;
-  camera.position.x += Math.sin(Date.now() * 0.0001) * 0.0001;
+  camera.position.y += Math.sin(Date.now() * 0.0001) * 0.0005;
+  camera.position.x += Math.sin(Date.now() * 0.0001) * 0.0005;
 
   // Update time
   var delta = clock.getDelta();
