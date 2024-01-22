@@ -68,7 +68,7 @@ const loader = new GLTFLoader();
 
 loader.load(
   "public/filter.glb",
-  function (gltf) {
+  function(gltf) {
     model = new Animation(gltf.scene, gltf.animations);
     scene.add(gltf.scene);
 
@@ -76,13 +76,13 @@ loader.load(
       // Create buttons
       const button = document.createElement("button");
       button.textContent = clip.name;
-      button.onclick = function () {
+      button.onclick = function() {
         model.playAnimation(clip);
       };
 
       const buttonReverse = document.createElement("button");
       buttonReverse.textContent = clip.name + " (Reverse)";
-      buttonReverse.onclick = function () {
+      buttonReverse.onclick = function() {
         model.playAnimationReverse(clip);
       };
 
@@ -92,7 +92,7 @@ loader.load(
     });
   },
   undefined,
-  function (error) {
+  function(error) {
     console.error(error);
   },
 );
@@ -102,8 +102,8 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Make floaty camera effect
-  camera.position.y += Math.sin(Date.now() * 0.0001) * 0.0005;
-  camera.position.x += Math.sin(Date.now() * 0.0001) * 0.0005;
+  // camera.position.y += Math.sin(Date.now() * 0.0001) * 0.0005;
+  // camera.position.x += Math.sin(Date.now() * 0.0001) * 0.0005;
 
   // Update time
   var delta = clock.getDelta();
