@@ -67,7 +67,7 @@ let model;
 const loader = new GLTFLoader();
 
 loader.load(
-  "public/filter.glb",
+  "filter.glb",
   function(gltf) {
     model = new Animation(gltf.scene, gltf.animations);
     scene.add(gltf.scene);
